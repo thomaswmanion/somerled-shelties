@@ -1,0 +1,19 @@
+div(ng-include='"components/navbar/navbar.html"')
+.container
+	.row
+		.thumbnail
+			.caption.text-center
+				h1.inline {{dog.showName}} ({{dog.callName}})
+			img.center.cover.rounded.img-responsive(src='{{dog.mainPhoto}}', alt='{{dog.showName}}')
+	.row(ng-show='dog.description')
+		h2 About {{dog.callName}}
+		.desc-box.rounded
+			.desc(ng-repeat='descLine in dog.description')
+				p {{descLine}}
+	hr
+	.row
+		.col-sm-6.col-md-4(ng-repeat='image in dog.images')
+			.thumbnail
+				a.pointer(ng-click="openLightboxModal($index)")
+					img(src='{{image.url}}')
+footer

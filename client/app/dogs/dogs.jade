@@ -1,0 +1,10 @@
+div(ng-include='"components/navbar/navbar.html"')
+.container
+	.row
+		.col-sm-6.col-md-4(ng-repeat='dog in dogs')
+			.thumbnail.dogs(ng-click='navigateTo(dog)')
+				img.img-responsive(src='{{dog.mainPhoto}}', alt='{{dog.showName}}')
+				.caption
+					h3 {{dog.showName}}
+					h4 {{dog.callName}}
+footer
