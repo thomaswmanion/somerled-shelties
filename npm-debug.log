@@ -1,86 +1,196 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
 1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'install',
-1 verbose cli   'angular-fullstack',
-1 verbose cli   '-g' ]
+1 verbose cli   'i' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
-4 verbose cache add [ 'angular-fullstack', null ]
-5 verbose cache add name=undefined spec="angular-fullstack" args=["angular-fullstack",null]
-6 verbose parsed url { protocol: null,
-6 verbose parsed url   slashes: null,
-6 verbose parsed url   auth: null,
-6 verbose parsed url   host: null,
-6 verbose parsed url   port: null,
-6 verbose parsed url   hostname: null,
-6 verbose parsed url   hash: null,
-6 verbose parsed url   search: null,
-6 verbose parsed url   query: null,
-6 verbose parsed url   pathname: 'angular-fullstack',
-6 verbose parsed url   path: 'angular-fullstack',
-6 verbose parsed url   href: 'angular-fullstack' }
-7 silly lockFile 080ca913-angular-fullstack angular-fullstack
-8 verbose lock angular-fullstack C:\Users\Tom\AppData\Roaming\npm-cache\080ca913-angular-fullstack.lock
-9 silly lockFile 080ca913-angular-fullstack angular-fullstack
-10 silly lockFile 080ca913-angular-fullstack angular-fullstack
-11 verbose addNamed [ 'angular-fullstack', '' ]
-12 verbose addNamed [ null, '*' ]
-13 silly lockFile 48c7f1ff-angular-fullstack angular-fullstack@
-14 verbose lock angular-fullstack@ C:\Users\Tom\AppData\Roaming\npm-cache\48c7f1ff-angular-fullstack.lock
-15 silly addNameRange { name: 'angular-fullstack', range: '*', hasData: false }
-16 verbose request where is /angular-fullstack
-17 verbose request registry https://registry.npmjs.org/
-18 verbose request id 398779f639456181
-19 verbose url raw /angular-fullstack
-20 verbose url resolving [ 'https://registry.npmjs.org/', './angular-fullstack' ]
-21 verbose url resolved https://registry.npmjs.org/angular-fullstack
-22 verbose request where is https://registry.npmjs.org/angular-fullstack
-23 info trying registry request attempt 1 at 17:22:00
-24 http GET https://registry.npmjs.org/angular-fullstack
-25 http 404 https://registry.npmjs.org/angular-fullstack
-26 verbose headers { date: 'Fri, 16 Jan 2015 23:22:01 GMT',
-26 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-26 verbose headers   'content-type': 'application/json',
-26 verbose headers   'cache-control': 'max-age=0',
-26 verbose headers   'content-length': '52',
-26 verbose headers   'accept-ranges': 'bytes',
-26 verbose headers   via: '1.1 varnish',
-26 verbose headers   age: '0',
-26 verbose headers   'x-served-by': 'cache-dfw1833-DFW',
-26 verbose headers   'x-cache': 'MISS',
-26 verbose headers   'x-cache-hits': '0',
-26 verbose headers   'x-timer': 'S1421450521.736861,VS0,VE223',
-26 verbose headers   'keep-alive': 'timeout=10, max=50',
-26 verbose headers   connection: 'Keep-Alive' }
-27 silly registry.get cb [ 404,
-27 silly registry.get   { date: 'Fri, 16 Jan 2015 23:22:01 GMT',
-27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-27 silly registry.get     'content-type': 'application/json',
-27 silly registry.get     'cache-control': 'max-age=0',
-27 silly registry.get     'content-length': '52',
-27 silly registry.get     'accept-ranges': 'bytes',
-27 silly registry.get     via: '1.1 varnish',
-27 silly registry.get     age: '0',
-27 silly registry.get     'x-served-by': 'cache-dfw1833-DFW',
-27 silly registry.get     'x-cache': 'MISS',
-27 silly registry.get     'x-cache-hits': '0',
-27 silly registry.get     'x-timer': 'S1421450521.736861,VS0,VE223',
-27 silly registry.get     'keep-alive': 'timeout=10, max=50',
-27 silly registry.get     connection: 'Keep-Alive' } ]
-28 silly lockFile 48c7f1ff-angular-fullstack angular-fullstack@
-29 silly lockFile 48c7f1ff-angular-fullstack angular-fullstack@
-30 error 404 404 Not Found: angular-fullstack
-30 error 404
-30 error 404 'angular-fullstack' is not in the npm registry.
-30 error 404 You should bug the author to publish it
-30 error 404
-30 error 404 Note that you can also install from a
-30 error 404 tarball, folder, or http url, or git url.
-31 error System Windows_NT 6.2.9200
-32 error command "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "angular-fullstack" "-g"
-33 error cwd c:\Users\Tom\documents\somerled-shelties
-34 error node -v v0.10.33
-35 error npm -v 1.4.28
-36 error code E404
-37 verbose exit [ 1, true ]
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ 'c:\\Users\\Tom\\Documents\\somerled-shelties',
+5 verbose install   [ 'express',
+5 verbose install     'morgan',
+5 verbose install     'body-parser',
+5 verbose install     'method-override',
+5 verbose install     'serve-favicon',
+5 verbose install     'cookie-parser',
+5 verbose install     'express-session',
+5 verbose install     'errorhandler',
+5 verbose install     'compression',
+5 verbose install     'lodash',
+5 verbose install     'jade',
+5 verbose install     'mongoose',
+5 verbose install     'composable-middleware',
+5 verbose install     'connect-mongo',
+5 verbose install     'grunt',
+5 verbose install     'grunt-autoprefixer',
+5 verbose install     'grunt-wiredep',
+5 verbose install     'grunt-concurrent',
+5 verbose install     'grunt-contrib-clean',
+5 verbose install     'grunt-contrib-concat',
+5 verbose install     'grunt-contrib-copy',
+5 verbose install     'grunt-contrib-cssmin',
+5 verbose install     'grunt-contrib-htmlmin',
+5 verbose install     'grunt-contrib-imagemin',
+5 verbose install     'grunt-contrib-jshint',
+5 verbose install     'grunt-contrib-uglify',
+5 verbose install     'grunt-contrib-watch',
+5 verbose install     'grunt-contrib-jade',
+5 verbose install     'grunt-contrib-less',
+5 verbose install     'grunt-google-cdn',
+5 verbose install     'grunt-newer',
+5 verbose install     'grunt-ng-annotate',
+5 verbose install     'grunt-rev',
+5 verbose install     'grunt-svgmin',
+5 verbose install     'grunt-usemin',
+5 verbose install     'grunt-env',
+5 verbose install     'grunt-node-inspector',
+5 verbose install     'grunt-nodemon',
+5 verbose install     'grunt-angular-templates',
+5 verbose install     'grunt-dom-munger',
+5 verbose install     'grunt-protractor-runner',
+5 verbose install     'grunt-asset-injector',
+5 verbose install     'grunt-karma',
+5 verbose install     'grunt-build-control',
+5 verbose install     'grunt-mocha-test',
+5 verbose install     'jit-grunt',
+5 verbose install     'time-grunt',
+5 verbose install     'grunt-express-server',
+5 verbose install     'grunt-open',
+5 verbose install     'open',
+5 verbose install     'jshint-stylish',
+5 verbose install     'connect-livereload',
+5 verbose install     'karma-ng-scenario',
+5 verbose install     'karma-firefox-launcher',
+5 verbose install     'karma-script-launcher',
+5 verbose install     'karma-html2js-preprocessor',
+5 verbose install     'karma-ng-jade2js-preprocessor',
+5 verbose install     'karma-jasmine',
+5 verbose install     'karma-chrome-launcher',
+5 verbose install     'requirejs',
+5 verbose install     'karma-requirejs',
+5 verbose install     'karma-coffee-preprocessor',
+5 verbose install     'karma-jade-preprocessor',
+5 verbose install     'karma-phantomjs-launcher',
+5 verbose install     'karma',
+5 verbose install     'karma-ng-html2js-preprocessor',
+5 verbose install     'supertest',
+5 verbose install     'should' ] ]
+6 info preinstall somerled-shelties@0.0.0
+7 verbose readDependencies using package.json deps
+8 verbose already installed skipping grunt-concurrent@~1.0.0 c:\Users\Tom\Documents\somerled-shelties
+9 verbose already installed skipping grunt-contrib-clean@~0.6.0 c:\Users\Tom\Documents\somerled-shelties
+10 verbose already installed skipping grunt-contrib-concat@~0.5.0 c:\Users\Tom\Documents\somerled-shelties
+11 verbose already installed skipping grunt-contrib-copy@~0.7.0 c:\Users\Tom\Documents\somerled-shelties
+12 verbose already installed skipping grunt-contrib-cssmin@~0.11.0 c:\Users\Tom\Documents\somerled-shelties
+13 verbose already installed skipping grunt-contrib-htmlmin@~0.3.0 c:\Users\Tom\Documents\somerled-shelties
+14 verbose already installed skipping grunt-contrib-imagemin@~0.9.2 c:\Users\Tom\Documents\somerled-shelties
+15 verbose already installed skipping grunt-contrib-jshint@~0.10.0 c:\Users\Tom\Documents\somerled-shelties
+16 verbose already installed skipping grunt-contrib-uglify@~0.7.0 c:\Users\Tom\Documents\somerled-shelties
+17 verbose already installed skipping grunt-contrib-watch@~0.6.1 c:\Users\Tom\Documents\somerled-shelties
+18 verbose already installed skipping grunt-contrib-jade@^0.14.0 c:\Users\Tom\Documents\somerled-shelties
+19 verbose already installed skipping grunt-contrib-less@^1.0.0 c:\Users\Tom\Documents\somerled-shelties
+20 verbose already installed skipping grunt-google-cdn@~0.4.3 c:\Users\Tom\Documents\somerled-shelties
+21 verbose already installed skipping grunt-newer@~1.1.0 c:\Users\Tom\Documents\somerled-shelties
+22 verbose already installed skipping grunt-ng-annotate@^0.8.0 c:\Users\Tom\Documents\somerled-shelties
+23 verbose already installed skipping grunt-rev@~0.1.0 c:\Users\Tom\Documents\somerled-shelties
+24 verbose already installed skipping grunt-svgmin@~2.0.0 c:\Users\Tom\Documents\somerled-shelties
+25 verbose already installed skipping grunt-usemin@~3.0.0 c:\Users\Tom\Documents\somerled-shelties
+26 verbose already installed skipping grunt-env@~0.4.2 c:\Users\Tom\Documents\somerled-shelties
+27 verbose already installed skipping grunt-node-inspector@~0.1.5 c:\Users\Tom\Documents\somerled-shelties
+28 verbose already installed skipping grunt-nodemon@~0.3.0 c:\Users\Tom\Documents\somerled-shelties
+29 verbose already installed skipping grunt-angular-templates@^0.5.7 c:\Users\Tom\Documents\somerled-shelties
+30 verbose already installed skipping grunt-dom-munger@^3.4.0 c:\Users\Tom\Documents\somerled-shelties
+31 verbose already installed skipping grunt-protractor-runner@^1.1.4 c:\Users\Tom\Documents\somerled-shelties
+32 verbose already installed skipping grunt-asset-injector@^0.1.0 c:\Users\Tom\Documents\somerled-shelties
+33 verbose already installed skipping grunt-karma@~0.10.1 c:\Users\Tom\Documents\somerled-shelties
+34 verbose cache add [ 'grunt-build-control@git+https://github.com/DaftMonk/grunt-build-control',
+34 verbose cache add   null ]
+35 verbose cache add name=undefined spec="grunt-build-control@git+https://github.com/DaftMonk/grunt-build-control" args=["grunt-build-control@git+https://github.com/DaftMonk/grunt-build-control",null]
+36 verbose parsed url { protocol: null,
+36 verbose parsed url   slashes: null,
+36 verbose parsed url   auth: null,
+36 verbose parsed url   host: null,
+36 verbose parsed url   port: null,
+36 verbose parsed url   hostname: null,
+36 verbose parsed url   hash: null,
+36 verbose parsed url   search: null,
+36 verbose parsed url   query: null,
+36 verbose parsed url   pathname: 'grunt-build-control@git+https://github.com/DaftMonk/grunt-build-control',
+36 verbose parsed url   path: 'grunt-build-control@git+https://github.com/DaftMonk/grunt-build-control',
+36 verbose parsed url   href: 'grunt-build-control@git+https://github.com/DaftMonk/grunt-build-control' }
+37 verbose already installed skipping grunt-mocha-test@~0.12.6 c:\Users\Tom\Documents\somerled-shelties
+38 verbose already installed skipping jit-grunt@^0.9.0 c:\Users\Tom\Documents\somerled-shelties
+39 verbose already installed skipping time-grunt@~1.0.0 c:\Users\Tom\Documents\somerled-shelties
+40 verbose already installed skipping grunt-express-server@~0.4.19 c:\Users\Tom\Documents\somerled-shelties
+41 verbose cache add name="grunt-build-control" spec="git+https://github.com/DaftMonk/grunt-build-control" args=["grunt-build-control","git+https://github.com/DaftMonk/grunt-build-control"]
+42 verbose parsed url { protocol: 'git+https:',
+42 verbose parsed url   slashes: true,
+42 verbose parsed url   auth: null,
+42 verbose parsed url   host: 'github.com',
+42 verbose parsed url   port: null,
+42 verbose parsed url   hostname: 'github.com',
+42 verbose parsed url   hash: null,
+42 verbose parsed url   search: null,
+42 verbose parsed url   query: null,
+42 verbose parsed url   pathname: '/DaftMonk/grunt-build-control',
+42 verbose parsed url   path: '/DaftMonk/grunt-build-control',
+42 verbose parsed url   href: 'git+https://github.com/DaftMonk/grunt-build-control' }
+43 silly lockFile 7e4d577b-com-DaftMonk-grunt-build-control https://github.com/DaftMonk/grunt-build-control
+44 verbose lock https://github.com/DaftMonk/grunt-build-control C:\Users\Tom\AppData\Roaming\npm-cache\7e4d577b-com-DaftMonk-grunt-build-control.lock
+45 verbose addRemoteGit [ 'https://github.com/DaftMonk/grunt-build-control', 'master' ]
+46 verbose already installed skipping grunt-open@~0.2.3 c:\Users\Tom\Documents\somerled-shelties
+47 verbose already installed skipping open@~0.0.5 c:\Users\Tom\Documents\somerled-shelties
+48 verbose already installed skipping jshint-stylish@~1.0.0 c:\Users\Tom\Documents\somerled-shelties
+49 verbose already installed skipping connect-livereload@~0.5.2 c:\Users\Tom\Documents\somerled-shelties
+50 verbose already installed skipping karma-ng-scenario@~0.1.0 c:\Users\Tom\Documents\somerled-shelties
+51 verbose already installed skipping karma-firefox-launcher@~0.1.4 c:\Users\Tom\Documents\somerled-shelties
+52 verbose already installed skipping karma-script-launcher@~0.1.0 c:\Users\Tom\Documents\somerled-shelties
+53 verbose already installed skipping karma-html2js-preprocessor@~0.1.0 c:\Users\Tom\Documents\somerled-shelties
+54 verbose already installed skipping karma-ng-jade2js-preprocessor@^0.2.0 c:\Users\Tom\Documents\somerled-shelties
+55 verbose already installed skipping karma-jasmine@~0.3.4 c:\Users\Tom\Documents\somerled-shelties
+56 verbose already installed skipping karma-chrome-launcher@~0.1.7 c:\Users\Tom\Documents\somerled-shelties
+57 verbose already installed skipping requirejs@~2.1.15 c:\Users\Tom\Documents\somerled-shelties
+58 verbose already installed skipping karma-requirejs@~0.2.2 c:\Users\Tom\Documents\somerled-shelties
+59 verbose already installed skipping karma-coffee-preprocessor@~0.2.1 c:\Users\Tom\Documents\somerled-shelties
+60 verbose already installed skipping karma-jade-preprocessor@0.0.11 c:\Users\Tom\Documents\somerled-shelties
+61 verbose already installed skipping karma-phantomjs-launcher@~0.1.4 c:\Users\Tom\Documents\somerled-shelties
+62 verbose already installed skipping karma@~0.12.31 c:\Users\Tom\Documents\somerled-shelties
+63 verbose already installed skipping karma-ng-html2js-preprocessor@~0.1.2 c:\Users\Tom\Documents\somerled-shelties
+64 verbose already installed skipping supertest@~0.15.0 c:\Users\Tom\Documents\somerled-shelties
+65 verbose already installed skipping should@~4.6.0 c:\Users\Tom\Documents\somerled-shelties
+66 verbose git remote.origin.url https://github.com/DaftMonk/grunt-build-control
+67 verbose already installed skipping express@~4.11.0 c:\Users\Tom\Documents\somerled-shelties
+68 verbose already installed skipping morgan@~1.5.1 c:\Users\Tom\Documents\somerled-shelties
+69 verbose already installed skipping body-parser@~1.10.1 c:\Users\Tom\Documents\somerled-shelties
+70 verbose already installed skipping method-override@~2.3.1 c:\Users\Tom\Documents\somerled-shelties
+71 verbose already installed skipping serve-favicon@~2.2.0 c:\Users\Tom\Documents\somerled-shelties
+72 verbose already installed skipping cookie-parser@~1.3.3 c:\Users\Tom\Documents\somerled-shelties
+73 verbose already installed skipping express-session@~1.10.1 c:\Users\Tom\Documents\somerled-shelties
+74 verbose already installed skipping errorhandler@~1.3.2 c:\Users\Tom\Documents\somerled-shelties
+75 verbose already installed skipping compression@~1.3.0 c:\Users\Tom\Documents\somerled-shelties
+76 verbose already installed skipping lodash@~2.4.1 c:\Users\Tom\Documents\somerled-shelties
+77 verbose already installed skipping jade@~1.9.0 c:\Users\Tom\Documents\somerled-shelties
+78 verbose already installed skipping mongoose@~3.8.21 c:\Users\Tom\Documents\somerled-shelties
+79 verbose already installed skipping composable-middleware@^0.3.0 c:\Users\Tom\Documents\somerled-shelties
+80 verbose already installed skipping connect-mongo@^0.6.0 c:\Users\Tom\Documents\somerled-shelties
+81 verbose already installed skipping grunt@~0.4.5 c:\Users\Tom\Documents\somerled-shelties
+82 verbose already installed skipping grunt-autoprefixer@~2.1.0 c:\Users\Tom\Documents\somerled-shelties
+83 verbose already installed skipping grunt-wiredep@~2.0.0 c:\Users\Tom\Documents\somerled-shelties
+84 error git fetch -a origin (https://github.com/DaftMonk/grunt-build-control) fatal: unable to access 'https://github.com/DaftMonk/grunt-build-control/': Could not resolve host: github.com
+85 silly lockFile 7e4d577b-com-DaftMonk-grunt-build-control https://github.com/DaftMonk/grunt-build-control
+86 silly lockFile 7e4d577b-com-DaftMonk-grunt-build-control https://github.com/DaftMonk/grunt-build-control
+87 error Error: Command failed: fatal: unable to access 'https://github.com/DaftMonk/grunt-build-control/': Could not resolve host: github.com
+87 error
+87 error     at ChildProcess.exithandler (child_process.js:648:15)
+87 error     at ChildProcess.emit (events.js:98:17)
+87 error     at maybeClose (child_process.js:756:16)
+87 error     at Process.ChildProcess._handle.onexit (child_process.js:823:5)
+88 error If you need help, you may report this *entire* log,
+88 error including the npm and node versions, at:
+88 error     <http://github.com/npm/npm/issues>
+89 error System Windows_NT 6.2.9200
+90 error command "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "i"
+91 error cwd c:\Users\Tom\Documents\somerled-shelties
+92 error node -v v0.10.33
+93 error npm -v 1.4.28
+94 error code 128
+95 verbose exit [ 1, true ]

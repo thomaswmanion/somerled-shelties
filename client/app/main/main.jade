@@ -2,7 +2,8 @@ div(ng-include='"components/navbar/navbar.html"')
 
 header
 	.container
-		h1 Welcome!
+		h2.text-center.dog-title-color Somerled Shetland Sheepdogs
+		hr.text-as-border-color
 		.carousel-wrapper
 			carousel(interval="5000")
 				slide(ng-repeat="slide in Data.slides", active="slide.active")

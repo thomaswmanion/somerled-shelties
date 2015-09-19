@@ -14,7 +14,10 @@
     "font-awesome": ">=4.1.0",
     "lodash": "~3.0.0",
     "angular-ui-router": "~0.2.10",
-    "angular-bootstrap-lightbox": "~0.3.3"
+    "angular-bootstrap-lightbox": "~0.3.3",
+    "angular-masonry": "~0.11.0",
+    "masonry": "~3.2.2",
+    "angular-masonry-directive": "*"
   },
   "devDependencies": {
     "angular-mocks": ">=1.2.*",

@@ -1,7 +1,8 @@
 @import 'bootstrap/less/bootstrap.less';
 @import 'font-awesome/less/font-awesome.less';
-
-
+@text-bg-color: #EFE1BB;
+@title-color: #92D050;
+@bg-color: darken(#072B62, 12.5%);
 
 /**
  * App-wide Styles
@@ -27,6 +28,18 @@ img.center {
 	cursor: hand;
 }
 
+.text-bg {
+    background-color: @text-bg-color;
+}
+
+.text-as-bg {
+    color: @text-bg-color;
+}
+
+.text-as-border-color {
+    border-color: @text-bg-color;
+}
+
 // injector
 @import 'bootstrap-variables.less';
 @import 'dog-profile/dog-profile.less';
@@ -35,5 +48,16 @@ img.center {
 @import 'modal/modal.less';
 // endinjector
 
+@body-bg: @bg-color;
+@navbar-default-color: @body-bg;
+@navbar-default-bg: @body-bg;
+@navbar-default-border: body-bg;
+@navbar-default-link-color: @text-bg-color;
+@navbar-default-link-hover-color: @title-color;
+@navbar-default-link-hover-bg: @body-bg;
 @icon-font-path: '/bower_components/bootstrap/fonts/';
 @fa-font-path: '/bower_components/font-awesome/fonts';
+
+.dog-title-color {
+    color: @title-color;
+}

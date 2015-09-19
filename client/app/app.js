@@ -6,7 +6,8 @@ angular.module('somerledSheltiesApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'bootstrapLightbox'
+  'bootstrapLightbox',
+  'masonry'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider
