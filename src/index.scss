@@ -1,2 +1,54 @@
-$body-bg: blue;
+$text-bg-color: #EFE1BB;
+$title-color: #92D050;
+$body-bg: darken(#072B62, 12.5%);
+$navbar-light-color: $body-bg;
+$navbar-light-hover-color: white;
+$navbar-light-active-color: white;
+$link-hover-color: $title-color;
+$btn-primary-bg: $title-color;
+$navbar-light-active-color: $title-color;
+$link-color: $title-color;
+/*@navbar-default-bg: @body-bg;
+@navbar-default-border: body-bg;
+@navbar-default-link-color: @text-bg-color;
+@navbar-default-link-hover-color: @title-color;
+@navbar-default-link-hover-bg: @body-bg;*/
+
 @import "../bower_components/bootstrap/scss/bootstrap.scss";
+
+body {
+	color: $text-bg-color;
+}
+
+/**
+ * App-wide Styles
+ */
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pointer {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.text-bg {
+    background-color: $text-bg-color;
+}
+
+.text-as-bg {
+    color: $text-bg-color;
+}
+
+.text-as-border-color {
+    border-color: $text-bg-color;
+}
+
+.nav-link {
+	color: $text-bg-color;
+}
+h1,h2 {
+	color: $title-color;
+}

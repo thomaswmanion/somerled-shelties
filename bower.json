@@ -17,6 +17,8 @@
   ],
   "dependencies": {
     "bootstrap": "4.0.0-alpha",
-    "mithril": "~0.2.0"
+    "masonry": "~3.3.2",
+    "mithril": "~0.2.0",
+    "mithril-validator": "~1.1.0"
   }
 }

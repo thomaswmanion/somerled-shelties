@@ -6,8 +6,9 @@ var prod = process.env.prod;
 var plugins = [];
 var dest;
 if (prod) {
-    console.log('prod!!');
-    plugins.push(new webpack.optimize.UglifyJsPlugin({minimize: true}));
+    plugins.push(new webpack.optimize.UglifyJsPlugin({
+        minimize: true
+    }));
     dest = path.join(__dirname, 'dist')
 }
 else {
@@ -15,7 +16,10 @@ else {
 }
 module.exports = {
     context: __dirname,
-    port: 9000,
+    devServer: {
+        historyApiFallback: true,
+        port: 9000
+    },
     entry: {
         app: './src/index.js'
     },
@@ -24,8 +28,7 @@ module.exports = {
         filename: 'scripts.js'
     },
     resolve: {
-        alias: {
-        }
+        root: './bower_components'
     },
     module: {
         loaders: [{
@@ -37,5 +40,15 @@ module.exports = {
             loader: 'style!css!sass'
         }]
     },
-  plugins: plugins
+    plugins: plugins
 };
+
+
+
+if (prod) {
+    var fs = require('fs');
+    if (!fs.existsSync('dist')) {
+        fs.mkdirSync('dist');
+    }
+    fs.createReadStream('index.html').pipe(fs.createWriteStream('dist/index.html'));
+}

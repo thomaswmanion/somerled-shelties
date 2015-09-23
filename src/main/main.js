@@ -6,8 +6,8 @@ var main = module.exports = {};
 
 main.view = function() {
     return m('.container', [
-    	m('br'),
-        m('.jumbotron', m('h1', 'Welcome!')),
+        m('h1.text-center.dog-title-color', 'Somerled Shetland Sheepdogs'),
+        m('hr.text-as-border-color'),
         [m(".carousel.slide[data-ride='carousel'][id='carousel-example-generic']", [
             m("ol.carousel-indicators", [
                 m("li.active[data-slide-to='0'][data-target='#carousel-example-generic']"),
@@ -47,13 +47,3 @@ main.view = function() {
 };
 
 $('.carousel').carousel()
-
-/*
-header
-	.container
-		h1 Welcome!
-		.carousel-wrapper
-			carousel(interval="5000")
-				slide(ng-repeat="slide in Data.slides", active="slide.active")
-					img(ng-src="{{slide.url}}", style="margin: auto;")
-footer*/
