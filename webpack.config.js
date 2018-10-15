@@ -46,9 +46,30 @@ module.exports = {
 
 
 if (prod) {
-    var fs = require('fs');
-    if (!fs.existsSync('dist')) {
-        fs.mkdirSync('dist');
-    }
-    fs.createReadStream('index.html').pipe(fs.createWriteStream('dist/index.html'));
+    var err = function(err) {
+        if (err) throw console.error(err);
+    };
+    var fs = require('fs-extra');
+    var minify = require('html-minifier').minify;
+
+    fs.emptyDir('./dist', function(err) {
+        if (err) throw console.error(err);
+        fs.copy('favicons/', 'dist/', {}, err);
+        fs.copy('images/', 'dist/images/', {}, err);
+        fs.readFile('./index.html', 'utf8', function(err, data) {
+            if (err) throw console.error(err);
+            var result = minify(data, {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeRedundantAttributes: true,
+                useShortDoctype: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                removeOptionalTags: true
+            });
+            fs.writeFile('./dist/index.html', result, err);
+        });
+    })
+
+
 }

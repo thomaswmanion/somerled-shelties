@@ -4,17 +4,20 @@ require('./dogs.scss');
 import Masonry from '../../bower_components/masonry/masonry.js';
 
 function config(el, isInit, ctx) {
-    setTimeout(function() {
+    var setup = function() {
         var msnry = new Masonry(el, {
             itemSelector: '.masonry-brick',
             transitionDuration: '0.5s'
         });
-    }, 0)
+    };
+    setTimeout(setup, 0);
+    setTimeout(setup, 2000);
+    setTimeout(setup, 10000);
 }
 
 module.exports.view = function(vm) {
 
-    if (!vm.dogs) {
+    if (!vm.dogs || !vm.dogs.map) {
         return '';
     }
     return m('.container', [
@@ -27,7 +30,7 @@ module.exports.view = function(vm) {
                     alt: dog.showName
                 };
                 var viewConfig = {
-                    onclick: vm.navigateTo(dog),
+                    href: '/view/' + dog.url,
                     config: m.route
                 };
                 return m('.col-xs-12.col-sm-6.col-md-4.col-lg-3.masonry-brick.card.card-block', [
@@ -48,24 +51,5 @@ module.exports.view = function(vm) {
 
 module.exports.controller = function() {
     var vm = this;
-    vm.navigateTo = function(dog) {
-        return function() {
-            m.route('/view/' + dog.url)
-        };
-    }
     return vm;
 };
-/*
-<h4 class="card-title">Card title</h4>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Button</a>
-
-
-.container
-	.row(masonry='{ "transitionDuration" : "0.0s" , "itemSelector" : ".masonry-brick"}')
-		.col-sm-6.col-md-4.masonry-brick.item(ng-repeat='dog in dogs')
-			.thumbnail.dogs.text-bg(ng-click='navigateTo(dog)')
-				img.img-responsive(src='{{dog.mainPhoto}}', alt='{{dog.showName}}')
-				.caption
-					h3 {{dog.showName}}
-					h4 {{dog.callName}}*/
